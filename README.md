@@ -4,6 +4,8 @@ chatwork-replace-icon.user.js
 ChatWork のユーザーアイコンを、指定した画像で置き換える UserScript です。
 Google Chrome で確認を行なっています。
 
+GitHub: https://github.com/chocoby/chatwork-replace-icon
+
 インストール
 ----------
 
@@ -28,5 +30,4 @@ Google Chrome で確認を行なっています。
 * ChatWork 側の変更により、正しく動作しなくなる可能性があります。
 * 画像を取得するためのクロスドメイン通信に [allow-any-origin.appspot.com](http://allow-any-origin.appspot.com/) を使用させて頂いています。サービスの停止により、画像が取得できなくなる可能性があります。
 * issue、pull request 歓迎です。
-
-GitHub: https://github.com/chocoby/chatwork-replace-icon
+* ご利用は自己責任でお願いします。
