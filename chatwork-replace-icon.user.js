@@ -20,7 +20,7 @@ function findIcon() {
         }
 
         timer = 0;
-    }, 30);
+    }, 5);
 };
 
 function fetchAndReplaceIcon(iconUrl, icon) {
