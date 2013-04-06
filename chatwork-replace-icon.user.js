@@ -31,9 +31,7 @@ function fetchAndReplaceIcon(iconUrl, icon) {
     } else {
         console.log("no cache! fetching icon...");
 
-        var req = new XMLHttpRequest(),
-            blob,
-            fileReader = new FileReader();
+        var req = new XMLHttpRequest();
 
         requestUrl = 'http://allow-any-origin.appspot.com/' + iconUrl;
         req.open('GET', requestUrl, true);
@@ -41,7 +39,8 @@ function fetchAndReplaceIcon(iconUrl, icon) {
 
         req.addEventListener("load", function() {
             if (req.status === 200) {
-                blob = new Blob([new Uint8Array(req.response)], { type: newIconImageType });
+                var blob = new Blob([new Uint8Array(req.response)], { type: newIconImageType });
+                var fileReader = new FileReader();
 
                 fileReader.onload = function(e) {
                     imageDataURL = e.target.result;
