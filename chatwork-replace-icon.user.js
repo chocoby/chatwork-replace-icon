@@ -7,7 +7,7 @@
 // // ==/UserScript==
 
 var iconClass = ""; // ex. cw_a123456
-var newIconUrl = "https://raw.github.com/chocoby/chatwork-replace-icon/master/images/mikudayo.jpg";
+var newIconUrl = ""; // ex. http://example.com/path/to/image.jpeg
 var newIconImageType = "image/jpeg";
 
 function findIcon() {
