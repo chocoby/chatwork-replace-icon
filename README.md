@@ -31,3 +31,8 @@ GitHub: https://github.com/chocoby/chatwork-replace-icon
 * 画像を取得するためのクロスドメイン通信に [allow-any-origin.appspot.com](http://allow-any-origin.appspot.com/) を使用させて頂いています。サービスの停止により、画像が取得できなくなる可能性があります。
 * issue、pull request 歓迎です。
 * ご利用は自己責任でお願いします。
+
+ライセンス
+---------
+
+MIT: http://chocoby.mit-license.org/
