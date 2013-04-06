@@ -29,6 +29,8 @@ function fetchAndReplaceIcon(iconUrl, icon) {
     if (imageDataURL) {
         icon.setAttribute("src", imageDataURL);
     } else {
+        console.log("no cache! fetching icon...");
+
         var req = new XMLHttpRequest(),
             blob,
             fileReader = new FileReader();
@@ -38,15 +40,21 @@ function fetchAndReplaceIcon(iconUrl, icon) {
         req.responseType = "arraybuffer";
 
         req.addEventListener("load", function() {
-            blob = new Blob([new Uint8Array(req.response)], { type: newIconImageType });
+            if (req.status === 200) {
+                blob = new Blob([new Uint8Array(req.response)], { type: newIconImageType });
 
-            fileReader.onload = function(e) {
-                imageDataURL = e.target.result;
-                icon.setAttribute("src", imageDataURL);
-                localStorage.setItem(iconUrl, imageDataURL);
+                fileReader.onload = function(e) {
+                    imageDataURL = e.target.result;
+                    icon.setAttribute("src", imageDataURL);
+                    localStorage.setItem(iconUrl, imageDataURL);
+
+                    console.log("cached icon!");
+                }
+
+                fileReader.readAsDataURL(blob);
+            } else {
+                console.log("icon fetch error!");
             }
-
-            fileReader.readAsDataURL(blob);
         }, false);
 
         req.send();
