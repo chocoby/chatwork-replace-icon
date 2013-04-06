@@ -1,12 +1,10 @@
 {
    "content_scripts": [ {
-      "exclude_globs": [ ],
-      "include_globs": [ ],
       "js": [ "chatwork-replace-icon.user.js" ],
       "matches": [ "https://www.chatwork.com/*" ]
    } ],
-   "description": "chatwork replace icon",
-   "name": "chatwork-replace-icon",
-   "manifest_version": 2,
-   "version": "0.1"
+   "name": "ChatWork Replace Icon",
+   "description": "Replace user icon in ChatWork.",
+   "version": "0.0.1",
+   "manifest_version": 2
 }
