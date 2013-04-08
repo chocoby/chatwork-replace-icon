@@ -1,10 +1,10 @@
 // ==UserScript==
-// // @name           ChatWork Replace Icon
-// // @description    Replace user icon in ChatWork.
-// // @namespace      https://github.com/chocoby/chatwork-replace-icon
-// // @include        https://www.chatwork.com/*
-// // @version        0.0.1
-// // ==/UserScript==
+// @name           ChatWork Replace Icon
+// @description    Replace user icon in ChatWork.
+// @namespace      https://github.com/chocoby/chatwork-replace-icon
+// @include        https://www.chatwork.com/*
+// @version        0.0.1
+// ==/UserScript==
 
 var iconClass = ""; // ex. cw_a123456
 var newIconUrl = ""; // ex. http://example.com/path/to/image.jpeg
