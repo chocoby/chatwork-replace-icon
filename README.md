@@ -1,39 +1,58 @@
-chatwork-replace-icon.user.js
-=============================
+# chatwork-replace-icon.user.js
 
-ChatWork のユーザーアイコンを、指定した画像で置き換える UserScript です。  
-Google Chrome で確認を行なっています。
+ChatWork のユーザーアイコンを、指定した画像で置き換える UserScript です。
 
-GitHub: https://github.com/chocoby/chatwork-replace-icon
+## インストール
 
-インストール
-----------
+1. [chatwork-replace-icon.user.js](https://github.com/chocoby/chatwork-replace-icon/raw/master/chatwork-replace-icon.user.js) を右クリックして「リンク先を別名で保存」で適当な場所に保存します。
 
-* [chatwork-replace-icon.user.js](https://github.com/chocoby/chatwork-replace-icon/raw/master/chatwork-replace-icon.user.js) を右クリックして「リンク先を別名で保存」で適当な場所に保存してください。
+2. Vim やメモ帳などのテキストエディタで保存した `chatwork-replace-icon.user.js` を開き、スクリプト上部に記述されている、以下の項目を設定します。
 
-* vim などのテキストエディタで chatwork-replace-icon.user.js を開き、スクリプト上部に記述されている、以下の変数を設定してください。
+    ```js
+    // EDIT BEGIN
+    var iconClass = ""; // ex. "cw_aXXXXXX"
+    var newIconUrl = ""; // ex. "http://example.com/path/to/image.jpg"
+    // EDIT END
+    ```
 
-  * `iconClass`: 置換したいアイコンのクラス名  
-    アイコンの `img` タグに `cw_a123456` といったクラスが振られていますので、そのクラス名を指定してください。  
-Google Chrome なら、アイコンを右クリックして「要素を検証」で見つけることができます。
+    **iconClass**: 置換したいアイコンのクラス名
+      アイコンの `img` タグに `cw_a123456` といったクラスが振られていますので、そのクラス名を指定します。
+      Google Chrome であれば、アイコンを右クリックして「要素を検証」で見つけることができます。
 
-  * `newIconUrl`: 新しいアイコンの URL  
-     新しく表示したいアイコンの URL を指定してください。アイコンは localStorage にキャッシュされます。
+    **newIconUrl**: 新しいアイコンの URL
+      新しく表示したいアイコンの URL を指定します。アイコンは localStorage にキャッシュされます。
+      **注意**: アイコンのサイズは 20KB 以内のものを指定してください。
 
-  * `newIconImageType`: 新しいアイコンの content type  
-    `image/jpeg` や `image/png` など、アイコンによって適当に設定してください。
+3. Google Chrome で「ツール」-「拡張機能」を開き、編集した `chatwork-replace-icon.user.js` をウィンドウ内にドラッグアンドドロップします。
 
-* 「ツール」-「拡張機能」を開き、 chatwork-replace-icon.user.js をウィンドウにドラッグアンドドロップしてください。
+## アップデート
 
-その他
-------
+「インストール」と同じ手順でアップデートを行なってください。
 
-* ChatWork 側の変更により、正しく動作しなくなる可能性があります。
-* 画像を取得するためのクロスドメイン通信に [allow-any-origin.appspot.com](http://allow-any-origin.appspot.com/) を使用させて頂いています。サービスの停止により、画像が取得できなくなる可能性があります。
-* issue、pull request 歓迎です。
+## 注意事項
+
+* Google Chrome の最新バージョンにて確認を行なっています。
+* ChatWork 側の変更により、動作しなくなる可能性があります。
+* アイコンを取得するためのクロスドメイン通信に [chatwork-allow-origin-proxy](https://github.com/chocoby/chatwork-allow-origin-proxy) を使用しています。
+  サービスの停止により、アイコンが取得できなくなる可能性があります。
 * ご利用は自己責任でお願いします。
 
-ライセンス
----------
+## 変更履歴
+
+### [v0.0.2](https://github.com/chocoby/chatwork-replace-icon/tree/v0.0.2) (2013/04/11)
+
+* クロスドメイン通信に自前の API を使用するようにした
+* アイコンキャッシュ処理の変更
+* アイコン変換処理の最適化
+
+### [v0.0.1](https://github.com/chocoby/chatwork-replace-icon/tree/v0.0.1) (2013/04/06)
+
+* 初期リリース
+
+## GitHub
+
+https://github.com/chocoby/chatwork-replace-icon
+
+## ライセンス
 
 MIT: http://chocoby.mit-license.org/
