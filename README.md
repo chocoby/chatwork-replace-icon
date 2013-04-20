@@ -2,6 +2,8 @@
 
 ChatWork のユーザーアイコンを、指定した画像で置き換える UserScript です。
 
+複数ユーザーのアイコンを置き換えたい場合は、 [chatwork-replace-icons-extension](https://github.com/chocoby/chatwork-replace-icons-extension) を使用することをお勧めします。
+
 ## インストール
 
 1. [chatwork-replace-icon.user.js](https://github.com/chocoby/chatwork-replace-icon/raw/master/chatwork-replace-icon.user.js) を右クリックして「リンク先を別名で保存」で適当な場所に保存します。
