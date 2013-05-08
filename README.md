@@ -12,13 +12,13 @@ ChatWork のユーザーアイコンを、指定した画像で置き換える U
 
     ```js
     // EDIT BEGIN
-    var iconClass = ""; // ex. "cw_aXXXXXX"
+    var userId = ""; // ex. "XXXXXX" (data-aid="123456")
     var newIconUrl = ""; // ex. "http://example.com/path/to/image.jpg"
     // EDIT END
     ```
 
-    **iconClass**: 置換したいアイコンのクラス名
-      アイコンの `img` タグに `cw_a123456` といったクラスが振られていますので、そのクラス名を指定します。
+    **userId**: 置換したいユーザー ID
+      アイコンの `img` タグに `data-aid` という属性がありますので、その中の値(ex. `123456`) を指定してください。
       Google Chrome であれば、アイコンを右クリックして「要素を検証」で見つけることができます。
 
     **newIconUrl**: 新しいアイコンの URL
@@ -31,6 +31,17 @@ ChatWork のユーザーアイコンを、指定した画像で置き換える U
 
 「インストール」と同じ手順でアップデートを行なってください。
 
+## バージョンごとの互換性
+
+ChatWork の仕様変更による対応で、バージョンごとの互換性が失われる場合があります。
+バージョンごとの対応を、以下の表に記します。お使いの ChatWork に対応したバージョンを使用してください。
+
+|日付|バージョン|変更内容|
+|----|----------|--------|
+|最新版|master 、またはそれ以降のタグ||
+|2013/05/08|[v0.0.3](https://github.com/chocoby/chatwork-replace-icon/tree/v0.0.3)|全体的に変更された|
+|～2013/05/07|[v0.0.2](https://github.com/chocoby/chatwork-replace-icon/tree/v0.0.2)||
+
 ## 注意事項
 
 * Google Chrome の最新バージョンにて確認を行なっています。
@@ -40,6 +51,10 @@ ChatWork のユーザーアイコンを、指定した画像で置き換える U
 * ご利用は自己責任でお願いします。
 
 ## 変更履歴
+
+### [v0.0.3](https://github.com/chocoby/chatwork-replace-icon/tree/v0.0.3) (2013/05/08)
+
+* ChatWork の仕様変更に対応
 
 ### [v0.0.2](https://github.com/chocoby/chatwork-replace-icon/tree/v0.0.2) (2013/04/11)
 
@@ -54,7 +69,3 @@ ChatWork のユーザーアイコンを、指定した画像で置き換える U
 ## GitHub
 
 https://github.com/chocoby/chatwork-replace-icon
-
-## ライセンス
-
-MIT: http://chocoby.mit-license.org/

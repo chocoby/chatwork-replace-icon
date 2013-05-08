@@ -3,11 +3,11 @@
 // @description    Replace user icon for ChatWork.
 // @namespace      https://github.com/chocoby/chatwork-replace-icon
 // @include        https://www.chatwork.com/*
-// @version        0.0.2
+// @version        0.0.3
 // ==/UserScript==
 
 // EDIT BEGIN
-var iconClass = ""; // ex. "cw_aXXXXXX"
+var userId = ""; // ex. "XXXXXX" (data-aid="123456")
 var newIconUrl = ""; // ex. "http://example.com/path/to/image.jpg"
 // EDIT END
 
@@ -67,7 +67,7 @@ function fetchAndReplaceIcon(iconUrl, icon) {
 }
 
 function getXpathExpression() {
-    return './/img[contains(concat(" ", @class, " "), " ' + iconClass + ' ")]';
+    return './/img[contains(concat(" ", @data-aid, " "), " ' + userId + ' ")]';
 }
 
 window.addEventListener("DOMNodeInserted", findIcon, false);
