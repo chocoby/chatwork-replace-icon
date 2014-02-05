@@ -56,7 +56,7 @@ function fetchAndReplaceIcon(iconUrl, icon) {
 
                     console.log("icon cached");
                 } else {
-                    statusMessage = res.status;
+                    var statusMessage = res.status;
                     console.log("icon fetch error: " + statusMessage);
                 }
             }
